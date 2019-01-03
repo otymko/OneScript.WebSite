@@ -1,11 +1,3 @@
-html
-{
-    /* margin-top: 11.200px;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-bottom: 11.200px; */
-}
-
 body
 {
     margin-top: 20px;
@@ -28,11 +20,6 @@ body
     margin-top: 20px;
 }
 
-/* .min-indent {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-} */
-
 .content {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -40,4 +27,14 @@ body
 
 #news {
     font-size: 12px;    
+}
+
+.nav-left {
+    padding: 5px 0 5px 0 !important;
+}
+
+.nav-left-title {
+    font-weight: 500;
+    padding: .5rem 1rem;
+    margin-bottom: 0px !important;
 }
