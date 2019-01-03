@@ -1,0 +1,43 @@
+html
+{
+    /* margin-top: 11.200px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 11.200px; */
+}
+
+body
+{
+    margin-top: 20px;
+}
+
+.box-img-partner {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.box-img-partner img {
+    height: 170px;
+    max-width: 100%;
+    object-fit: cover;
+    /* height: auto; */
+}
+
+.download-button {
+    margin-top: 20px;
+}
+
+/* .min-indent {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+} */
+
+.content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#news {
+    font-size: 12px;    
+}

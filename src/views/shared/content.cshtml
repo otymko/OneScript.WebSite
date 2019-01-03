@@ -1,0 +1,8 @@
+@if (Model.ЭтоMD)
+{
+    @Html.Raw(Model.Содержимое) 
+}
+else
+{
+    @await Html.PartialAsync((string) Model.Содержимое)   
+}
