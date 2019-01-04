@@ -38,3 +38,7 @@ body
     padding: .5rem 1rem;
     margin-bottom: 0px !important;
 }
+
+.breadcrumb {
+    background-color: transparent !important;
+}

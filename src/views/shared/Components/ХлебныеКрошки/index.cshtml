@@ -1,0 +1,23 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+    @{
+        try{
+            foreach(var ЭлементЛокальнойНавигации in @Model.ЛокальнаяНавигация){
+                    @if (@ЭлементЛокальнойНавигации.ЭтоТекущаяСтраница)
+                    {
+                        <li class="breadcrumb-item active" aria-current="page">@ЭлементЛокальнойНавигации.Заголовок</li>
+                    }
+                    else
+                    {
+                        <li class="breadcrumb-item">
+                            <a href="@ЭлементЛокальнойНавигации.Ссылка">@ЭлементЛокальнойНавигации.Заголовок</a>
+                        </li>
+                    }
+            }
+        }
+        catch{}
+    }
+    <!-- <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+  </ol>
+</nav>
