@@ -1,4 +1,4 @@
-body
+/* body
 {
     margin-top: 20px;
 }
@@ -13,7 +13,6 @@ body
     height: 170px;
     max-width: 100%;
     object-fit: cover;
-    /* height: auto; */
 }
 
 .download-button {
@@ -41,4 +40,4 @@ body
 
 .breadcrumb {
     background-color: transparent !important;
-}
+} */
