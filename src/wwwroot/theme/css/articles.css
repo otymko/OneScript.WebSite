@@ -8,6 +8,10 @@
     display: block;
 }
 
+.article-annotation {
+    
+}
+
 h1 {
     font-size: 22pt;
 }
@@ -18,4 +22,5 @@ h2 {
 
 h3 {
     font-size: 14pt;
+    /*font-weight: bolder;*/
 }
