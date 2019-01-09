@@ -1,4 +1,4 @@
-<nav class="nav flex-column">
+<!-- <nav class="nav flex-column">
     <ul class="list-group">
         <li class="list-group-item nav-left-title active">
             @Model.НавигационноеМеню.Заголовок
@@ -9,4 +9,8 @@
         </li>
     }
     </ul>
-</nav>
+</nav> -->
+
+@foreach(var ЗаписьНавигации in @Model.НавигационноеМеню.ТаблицаНавигации) {
+    <li><a href="@ЗаписьНавигации.Ссылка">@ЗаписьНавигации.Заголовок</a></li>
+}

@@ -1,8 +1,18 @@
-<div class="">
+
+@section PageStylesheet{
+    <link href="/theme/css/articles.css" rel="stylesheet">
+}
+
+<div class="container">
     <div class="row">
         <div class="col-md-3">
-            <div class="">
-                @await Html.PartialAsync("content-navbar")
+            <div class="panel panel-default">
+                <div class="panel-heading">Оглавление</div>
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        @await Html.PartialAsync("content-navbar")
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="col-md-9">
