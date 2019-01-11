@@ -1,0 +1,17 @@
+@section PageStylesheet{
+    <link href="/theme/css/articles.css" rel="stylesheet">
+}
+
+<div class="container">
+    <div class="row">
+        <h1>Скачать версию</h1>
+        <div class="col-md-9">
+            @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.ТекущаяСборка})
+        </div>
+    </div>
+    <div class="row">
+        <div id="changelog">
+            @Html.Raw(Model.Содержимое);
+        </div>
+    </div>
+</div>

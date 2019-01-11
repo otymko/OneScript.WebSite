@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  osweb:
+    build: ./
+    ports:
+     - 8081:5000
+    volumes:
+     - ./src:/app
+     - ./files:/files

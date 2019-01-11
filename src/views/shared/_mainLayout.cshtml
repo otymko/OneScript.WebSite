@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    @if (@ViewBag.MetaDescription == null) 
+    { 
+    <meta name="description" content="Независимый кросс-платформенный интерпретатор языка 1С."/>
+    }
+    else
+    {
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    }
+
+    <title>@ViewBag.Title</title>
+
+    <!-- Стили -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/theme/css/oscommon.css" rel="stylesheet">
+
+    
+    @RenderSection("PageStylesheet", false)
+
+</head>
+<body>
+    <div id="wrap">
+
+        <!-- Шапка -->
+        @await Component.InvokeAsync("ШапкаСтраницы", new {model = Model})
+
+        <!-- Хлебные крошки -->        
+        @if (@ViewBag.Url != "index") {
+            //пока убираем доп навигацию
+            //@await Component.InvokeAsync("ХлебныеКрошки", new {model = Model});
+        }
+        
+        <!-- Контент -->
+        <div class="content">
+            @RenderBody()
+        </div>
+
+        <!-- Подвал -->
+        @await Component.InvokeAsync("ПодвалСтраницы", new {model = Model})
+
+    </div>
+
+    <!-- Скрипты -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+
+    <!-- Яндекс метрика -->
+    @await Component.InvokeAsync("ЯндексМетрика") 
+
+</body>
+</html>

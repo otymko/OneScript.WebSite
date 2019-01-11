@@ -1,0 +1,43 @@
+/* body
+{
+    margin-top: 20px;
+}
+
+.box-img-partner {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.box-img-partner img {
+    height: 170px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.download-button {
+    margin-top: 20px;
+}
+
+.content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#news {
+    font-size: 12px;    
+}
+
+.nav-left {
+    padding: 5px 0 5px 0 !important;
+}
+
+.nav-left-title {
+    font-weight: 500;
+    padding: .5rem 1rem;
+    margin-bottom: 0px !important;
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+} */
