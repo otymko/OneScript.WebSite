@@ -1,40 +1,35 @@
 <div class="header"> 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="d-flex flex-grow-1">
-            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-            <a class="navbar-brand d-none d-lg-inline-block" href="/">
-                OneScript
-            </a>
-            <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="/">
-                <img src="//placehold.it/40?text=LOGO" alt="logo">
-            </a>
-            <div class="w-100 text-right">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-            <ul class="navbar-nav ml-auto flex-nowrap">
-                <li class="nav-item">
-                    <a class="nav-link m-2 menu-item" href="/downloads">Скачать</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand header-logo-style" href="/">OneScript</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/docs/page/getting-started">Быстрый старт</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link m-2 menu-item" href="/docs/page/getstarted">Быстрый старт</a>
+                    <a class="nav-link" href="/docs/">Документация</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link m-2 menu-item" href="/docs/">Документация</a>
+                    <a class="nav-link" href="/downloads">Скачать</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link m-2 menu-item" href="/syntax/">Синтаксис</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link m-2 menu-item" href="/library/">Библиотеки</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link m-2 menu-item" href="/dev/">Разработчикам</a>
+                    <a class="nav-link" href="/dev/">Сообщество</a>
                 </li>
             </ul>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Найти</button>
+            </form>
+            <a class="nav-link text-light" href="/downloads/archive/1_0_21">v 1.0.21</a>
+            <a class="nav-link text-light" href="https://github.com/EvilBeaver/OneScript" target="_blank">GitHub 
+            <i class="fas fa-link"></i>
+            </a>
+            </div>
         </div>
     </nav>
 </div>

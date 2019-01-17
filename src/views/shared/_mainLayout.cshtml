@@ -13,13 +13,14 @@
 
     <title>@ViewBag.Title</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.css">
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
     <!-- Стили -->
-
-    <!-- Bootstrap core CSS -->
-    <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/theme/css/oscommon.css" rel="stylesheet">
-
-    
+    <link rel="stylesheet" href="/theme/theme.css"> 
     @RenderSection("PageStylesheet", false)
 
 </head>
@@ -32,7 +33,7 @@
         <!-- Хлебные крошки -->        
         @if (@ViewBag.Url != "index") {
             //пока убираем доп навигацию
-            //@await Component.InvokeAsync("ХлебныеКрошки", new {model = Model});
+            @await Component.InvokeAsync("ХлебныеКрошки", new {model = Model});
         }
         
         <!-- Контент -->
@@ -46,8 +47,9 @@
     </div>
 
     <!-- Скрипты -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="/theme/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="/theme/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <!-- Яндекс метрика -->
     @await Component.InvokeAsync("ЯндексМетрика") 
