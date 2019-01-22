@@ -1,12 +1,9 @@
-FROM evilbeaver/oscript-web:dev
-
-COPY files/onescript-engine_1.0.21_all.deb /files/onescript-engine_1.0.21_all.deb
-RUN dpkg -i /files/onescript-engine_1.0.21_all.deb
-
-COPY files/semver-0.5.1.ospx /files/semver-0.5.1.ospx
-RUN opm install -f /files/semver-0.5.1.ospx
+FROM evilbeaver/onescript:1.0.21
 
 COPY src /app
-
-RUN cd /app
+WORKDIR /app
 RUN opm install -l
+
+FROM evilbeaver/oscript-web:0.3.3
+
+COPY --from=0 /app .
