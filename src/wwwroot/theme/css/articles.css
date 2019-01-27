@@ -24,3 +24,7 @@ h3 {
     font-size: 14pt;
     /*font-weight: bolder;*/
 }
+
+.theme-container {
+    padding-left: 30px;
+}

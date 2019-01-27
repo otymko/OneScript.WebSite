@@ -14,3 +14,7 @@ h3{
     font-style: italic;
     margin-top: 28px;
 }
+
+.theme-container {
+    padding-left: 30px;
+}

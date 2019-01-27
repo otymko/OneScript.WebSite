@@ -3,10 +3,15 @@
 }
 
 @section PageStylesheet{
-    <link href="/theme/css/syntax.css" rel="stylesheet">
+    @if (Model.ИдентификаторСекции == "syntax"){
+        <link href="/theme/css/syntax.css" rel="stylesheet">
+    }
+    else{
+        <link href="/theme/css/articles.css" rel="stylesheet">
+    }
 }
 
-<div class="container">
+<div class="container theme-container">
     <div class="row">
         @await Html.PartialAsync("content")
     </div>
