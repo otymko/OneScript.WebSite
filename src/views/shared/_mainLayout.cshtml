@@ -27,7 +27,7 @@
     <div id="wrap">
 
         <!-- Шапка -->
-        @await Component.InvokeAsync("ШапкаСтраницы", new {model = Model})
+        @await Component.InvokeAsync("ШапкаСтраницы")
 
         <!-- Хлебные крошки -->        
         @if (@ViewBag.Url != "index") {
@@ -41,7 +41,7 @@
         </div>
 
         <!-- Подвал -->
-        @await Component.InvokeAsync("ПодвалСтраницы", new {model = Model})
+        @await Component.InvokeAsync("ПодвалСтраницы")
 
     </div>
 
