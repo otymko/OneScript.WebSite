@@ -234,6 +234,10 @@ a:hover,
   border: none;
 }
 
+.custom-content {
+  min-height: calc(100vh - 389px);
+}
+
 
 
 
