@@ -1,7 +1,5 @@
 version: "3"
-
 services:
-
   osweb:
     build: ./
     ports:
@@ -9,3 +7,6 @@ services:
     volumes:
      - ./src:/app
      - ./files:/files
+    environment:
+     - OS_CONTENT_DIRECTORY=/app/content
+     - OS_DOWNLOAD_DIRECTORY=/app/download
