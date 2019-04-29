@@ -1,0 +1,29 @@
+<div id="navigation" class="col-md-3">
+    <div class="side-panel-group" id="side-nav-menu" role="tablist" aria-multiselectable="true">
+        @foreach(var РазделНавигации in @Model.БоковоеНавигационноеМеню.ЭлементыМеню) {
+            <div class="panel side-panel-default">
+                <div class="panel-heading" role="tab" id="heading-@РазделНавигации.Идентификатор">
+                    <h4 class="side-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#side-nav-menu" href="#collapse-@РазделНавигации.Идентификатор" data-target="#collapse-@РазделНавигации.Идентификатор"
+                            aria-expanded="false" aria-controls="collapse-@РазделНавигации.Идентификатор">
+                            @РазделНавигации.ИмяРаздела
+                        </a>
+                    </h4>   
+                </div>  
+                <div id="collapse-@РазделНавигации.Идентификатор" class="panel-collapse collapse @РазделНавигации.РазделАктивен" data-parent="#side-nav-menu" aria-labelledby="heading-@РазделНавигации.Идентификатор">
+                    <div class="side-panel-body">
+                        <ul class="side-nav-list list-group">
+                             @foreach(var СтраницаРаздела in @РазделНавигации.Страницы) {
+                                <li class="list-group-item">
+                                    <a href="#@СтраницаРаздела.Ссылка">@СтраницаРаздела.Заголовок</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+        }      
+    </div>
+</div>
+
+                   

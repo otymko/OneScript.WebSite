@@ -247,7 +247,7 @@ a:hover,
 }
 
 h1 {
-  margin-top: 80px;
+  /* margin-top: 40px; */
   font-size: 60px;
   line-height: 65px;
   font-weight: 700;
@@ -263,6 +263,29 @@ a.nav-link:hover, a.header-infoblock-link:hover {
 
 article, .content-body {
   margin-bottom: 120px;
+}
+
+.breadcrumb {
+  padding-left: 0;
+  background: transparent !important;
+}
+
+.breadcrumb-item a {
+  color: black;
+}
+
+.breadcrumb-item a:hover {
+  color: #ffc107 !important;
+}
+
+.col-md-9 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 
