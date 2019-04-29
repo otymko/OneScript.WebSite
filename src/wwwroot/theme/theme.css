@@ -5,6 +5,7 @@
 a:hover, 
 .a:hover {
    text-decoration: none !important;
+   color: #ffc107;
 }
 
 
@@ -239,6 +240,30 @@ a:hover,
 }
 
 
+/* Новые стили */
+
+.title-main {
+  margin-top: 0 !important; 
+}
+
+h1 {
+  margin-top: 80px;
+  font-size: 60px;
+  line-height: 65px;
+  font-weight: 700;
+}
+
+a.nav-link {
+  color: white !important; 
+}
+
+a.nav-link:hover, a.header-infoblock-link:hover {
+  color: #ffc107 !important;
+}
+
+article, .content-body {
+  margin-bottom: 120px;
+}
 
 
 
