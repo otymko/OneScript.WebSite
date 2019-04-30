@@ -5,69 +5,8 @@
                 @await Html.PartialAsync("content")
             </article>
 
-            <div id="navigation" class="col-md-3">
-                <div class="side-panel-group" id="side-nav-menu" role="tablist" aria-multiselectable="true">
-                    <div class="panel side-panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                            <h4 class="side-panel-title">
-                                <a role="button" data-toggle="collapse" data-parent="#side-nav-menu" href="#collapseOne" data-target="#collapseOne"
-                                    aria-expanded="false" aria-controls="collapseOne">
-                                    Быстрый старт
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse show" data-parent="#side-nav-menu" aria-labelledby="headingOne">
-                            <div class="side-panel-body">
-                                <ul class="side-nav-list list-group">
-                                    <li class="list-group-item"><a href="#">item 1</a></li>
-                                    <li class="list-group-item"><a href="#">item 2</a></li>
-                                    <li class="list-group-item"><a href="#">item 3</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel side-panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                            <h4 class="side-panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#side-nav-menu" data-target="#collapseTwo"
-                                    href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Примеры
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" data-parent="#side-nav-menu" aria-labelledby="headingTwo">
-                            <div class="side-panel-body">
-                                <ul class="side-nav-list list-group">
-                                    <li class="list-group-item"><a href="#">item 1</a></li>
-                                    <li class="list-group-item"><a href="#">item 2</a></li>
-                                    <li class="list-group-item"><a href="#">item 3</a></li>
-                                    <li class="list-group-item"><a href="#">item 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-					<div class="panel side-panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="side-panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#side-nav-menu" data-target="#collapseThree"
-                                    href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Синтаксис
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" data-parent="#side-nav-menu" aria-labelledby="headingThree">
-                            <div class="side-panel-body">
-                                <ul class="side-nav-list list-group">
-                                    <li class="list-group-item"><a href="#">item 1</a></li>
-                                    <li class="list-group-item"><a href="#">item 2</a></li>
-                                    <li class="list-group-item"><a href="#">item 3</a></li>
-                                    <li class="list-group-item"><a href="#">item 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- БоковоеНавигационноеМеню  -->
+            @await Component.InvokeAsync("БоковоеНавигационноеМеню", new {model = Model})
         </div>
     </div>
 </div>
