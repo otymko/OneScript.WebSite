@@ -16,6 +16,14 @@
                              @foreach(var СтраницаРаздела in @РазделНавигации.Страницы) {
                                 <li class="list-group-item">
                                     <a href="/@СтраницаРаздела.Ссылка">@СтраницаРаздела.Заголовок</a>
+                                    @{
+                                        try{
+                                            @if (@СтраницаРаздела.Активная == true){
+                                                <span class="side-element-panel-active"/>
+                                            }
+                                        }
+                                        catch{}
+                                    }
                                 </li>
                             }
                         </ul>

@@ -288,6 +288,16 @@ article, .content-body {
   margin-right: 0;
 }
 
+.side-element-panel-active {
+  width: 4px;
+  height: 25px;
+  padding-left: 16px;
+  position: absolute;
+  left: 0px;
+  margin-top: -3px;
+  border-left: 4px solid rgb(255, 193, 7);
+}
+
 
 
 
