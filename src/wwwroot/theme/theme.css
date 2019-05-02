@@ -143,6 +143,10 @@ a:hover,
   background: linear-gradient(to right, white 50%, rgb(247, 247, 247) 50%);
 }
 
+body {
+  min-height: 100vh;
+}
+
 #content {
   background-color: white;
   /* background-color: transparent; */
@@ -180,8 +184,8 @@ a:hover,
 
 .side-panel-default > .panel-heading {
   color: #333;
-  background-color: #fff;
-  border-color: #e4e5e7;
+  /* background-color: #fff;
+  border-color: #e4e5e7; */
   padding: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -236,7 +240,9 @@ a:hover,
 }
 
 .custom-content {
-  min-height: calc(100vh - 389px);
+  /* min-height: calc(100vh - 389px); */
+  /* min-height: calc(100vh - 453px); */
+  min-height: calc(100vh - 414px);
 }
 
 
@@ -261,8 +267,13 @@ a.nav-link:hover, a.header-infoblock-link:hover {
   color: #ffc107 !important;
 }
 
-article, .content-body {
+.content-body {
   margin-bottom: 120px;
+}
+
+article {
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .breadcrumb {
@@ -298,6 +309,36 @@ article, .content-body {
   border-left: 4px solid rgb(255, 193, 7);
 }
 
+.sidebar-right {
+  height: 100%;
+  /* width: 380px; */
+  min-width: 31vw;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.footer-box {
+  max-width: 50vw;
+  margin-right: 10vw;
+}
+
+/* body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+} */
+
+.list-group-item {
+  background-color: transparent !important;
+}
 
 
 
