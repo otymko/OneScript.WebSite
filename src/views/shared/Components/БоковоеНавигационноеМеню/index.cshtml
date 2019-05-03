@@ -1,4 +1,4 @@
-<div id="navigation" class="col-md-3">
+<div id="navigation" class="sidebar-right">
     <div class="side-panel-group" id="side-nav-menu" role="tablist" aria-multiselectable="true">
         @foreach(var РазделНавигации in @Model.БоковоеНавигационноеМеню.ЭлементыМеню) {
             <div class="panel side-panel-default">
@@ -15,7 +15,15 @@
                         <ul class="side-nav-list list-group">
                              @foreach(var СтраницаРаздела in @РазделНавигации.Страницы) {
                                 <li class="list-group-item">
-                                    <a href="/docs/@РазделНавигации.Идентификатор/@СтраницаРаздела.Ссылка">@СтраницаРаздела.Заголовок</a>
+                                    <a href="/@СтраницаРаздела.Ссылка">@СтраницаРаздела.Заголовок</a>
+                                    @{
+                                        try{
+                                            @if (@СтраницаРаздела.Активная == true){
+                                                <span class="side-element-panel-active"/>
+                                            }
+                                        }
+                                        catch{}
+                                    }
                                 </li>
                             }
                         </ul>
