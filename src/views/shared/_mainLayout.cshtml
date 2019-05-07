@@ -32,8 +32,7 @@
 
         <!-- Хлебные крошки -->        
         @if (@ViewBag.Url != "index") {
-            //пока убираем доп навигацию
-            <div class="container">
+            <div class="container row-breadcrumb">
                 @await Component.InvokeAsync("ХлебныеКрошки", new {model = Model})
             </div>
         }
