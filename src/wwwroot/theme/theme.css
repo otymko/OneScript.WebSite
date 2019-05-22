@@ -51,8 +51,9 @@ a:hover,
 
   .header-infoblock {
     background-color: #282c34; 
-    padding-top: 75px;
-    padding-bottom: 75px;
+    margin-top: 60px;
+    padding-top: 25pt;
+    padding-bottom: 20pt;
   }
 
   .footer-infoblock
