@@ -4,9 +4,9 @@
         <div class="container block-footer">
             <div class='@(this.ViewContext.RouteData.Values["controller"].ToString() == "content" ? "footer-box" : "")'>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-@Model.ПредставлениеПодвала.РазмерКолонок">
                         <h3 class="theme-color-main">OneScript</h3>
-                        <p>Инструмент автоматизации для специалистов по 1С</p>
+                        <p>@Model.ПредставлениеПодвала.КраткоеОписание</p>
                         <ul class="list-inline social-link">
                             <li class="list-inline-item">
                                 <a href="https://github.com/oscript-library" class="text-light" target="_blank"><i class="fab fa-github"></i></a>
@@ -19,69 +19,21 @@
                             </li>
                         </ul>
                     </div> 
-                    <div class="col-md-3">
-                        <h5 class="font-weight-normal w-100">Информация</h5>
-                        <ul class="list-unstyled nav-footer">
-                            <li>
-                                <a href="/info" class="text-light">О проекте</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/oscript-library" class="text-light" target="_blank">Организация в GitHub</a>
-                            </li>
-                            <li>
-                                <a href="/thanks" class="text-light">Благодарности</a>
-                            </li>
-                            <li>
-                                <a href="/dev/contribute" class="text-light">Помощь проекту</a>
-                            </li>
-                            <li>
-                                <a href="/sitemaps" class="text-light">Карта сайта</a>
-                            </li>
-                        </ul>
-                    </div> 
-                    <div class="col-md-3">
-                        <h5 class="font-weight-normal w-100">Руководство</h5>
-                        <ul class="list-unstyled nav-footer">
-                            <li>
-                                <a href="#" class="text-light">Быстрый старт</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Синтаксис</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Примеры</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Библиотеки OneScript</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">OneScript.Web</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 class="font-weight-normal w-100">Сообщество</h5>
-                        <ul class="list-unstyled nav-footer">
-                            <li>
-                                <a href="#" class="text-light">С чего начать</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Как устроен проект</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Примеры</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Исходные коды</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Соглашение о разработке</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @foreach(var Колонка in @Model.ПредставлениеПодвала.Колонки) {
+                        <div class="col-md-@Model.ПредставлениеПодвала.РазмерКолонок">
+                            <h5 class="font-weight-normal w-100">@Колонка.Заголовок</h5>
+                            <ul class="list-unstyled nav-footer">
+                                @foreach(var Состав in @Колонка.Состав) {
+                                    <li>
+                                        <a href="@Состав.Ссылка" class="text-light">@Состав.Заголовок</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div> 
+                    }
                 </div> 
                 <div class="row text-center footer-legeng">
-                    <p class="w-100">2018 OneScript</p>
+                    <p class="w-100">@Model.ПредставлениеПодвала.ЛегендаСайта</p>
                 </div>    
             </div>
         </div>
