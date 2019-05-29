@@ -1,7 +1,5 @@
 #!groovy
 node {  
-    agent { label 'linux' }
-  
     stage('Обновление исходников сайта') { 
         dir("/home/andrei/os"){
           sh 'sudo git submodule update --init --recursive'
