@@ -9,7 +9,7 @@ Git-репозиторий официального сайта http://oscript.io
 
 ## Развитие сайта
 
-Информацию можно изучить [CONTRIBUTING.md]().
+Информацию можно изучить [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Быстрый старт
 
