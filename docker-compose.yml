@@ -8,7 +8,7 @@ services:
      - 8081:5000
     volumes:
      - ./src:/app
-     - ./files:/files
+     - ./files:/app/download
     environment:
      - OS_CONTENT_DIRECTORY=/app/content
      - OS_DOWNLOAD_DIRECTORY=/app/download
