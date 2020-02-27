@@ -1,8 +1,6 @@
 
 # SafeArrayWrapper / SafeArrayWrapper
-      
 
-      
     
     
 Вспомогательный класс для работы с объектами COMSafeArray, получаемыми из COM-объектов.
@@ -20,5 +18,4 @@
 ### SetValue / SetValue()
     
 ### Выгрузить / Unload()
-    
     
