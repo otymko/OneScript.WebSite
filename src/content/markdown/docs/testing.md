@@ -1,6 +1,6 @@
 Организовано приемочное тестирование, аналогичное тестированию 1C в проекте [xUnitFor1C](https://github.com/xDrivenDevelopment/xUnitFor1C/wiki)
 
-Для запуска тестов используется скрипт [testrunner.os](https://github.com/EvilBeaver/oscript-library/tree/develop/tests).
+Для запуска тестов используется скрипт [testrunner.os](https://github.com/EvilBeaver/OneScript/blob/develop/tests/testrunner.os).
 
 Скрипт выполняет последовательный прогон тестов, переданных в командной строке.
 
@@ -35,7 +35,7 @@
 
 Тесты находятся в каталоге `tests`
 
-Пример скрипта-теста находится в `tests\example-test.os` :
+Пример скрипта-теста находится в [tests\example-test.os](https://github.com/EvilBeaver/OneScript/blob/develop/tests/example-test.os) :
 
 	Перем юТест;
 	
