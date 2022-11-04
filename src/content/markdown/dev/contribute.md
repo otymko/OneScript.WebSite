@@ -5,7 +5,9 @@
 Вы можете доработать этот сайт целиком, например, поменять дизайн или сделать более удобный синтакс-помощник.
 Иными словами, мы рады любым идеям, не стесняйтесь писать нам.
 
-Свяжитесь с [EvilBeaver](mailto:ovsiankin.aa@gmail.com) и сообщите, что хотели бы сделать.
+* Свяжитесь с [EvilBeaver](mailto:ovsiankin.aa@gmail.com) и сообщите, что хотели бы сделать.
+* Напишите нам в Telegram https://t.me/oscript_library
+* Напишите свое пожелание или сообщите об ошибке https://github.com/EvilBeaver/OneScript/issues
 
 Во-первых, у нас есть открытый список задач: https://github.com/EvilBeaver/OneScript/issues - это по самому движку.
 Во-вторых, есть библиотека готовых пакетов скриптов и утилит. https://github.com/oscript-library Каждый пакет- по сути, отдельный проект со своим списком задач. Можно развивать и их в том числе.
@@ -24,7 +26,7 @@
 
 Скрипты пишутся на языке 1С - это наш с вами знакомый и любимый язык. Доработать что-то и прислать результат нам - это не страшно и не сложно.
 
-По вопросам доработки библиотеки, пишите сюда: https://gitter.im/EvilBeaver/oscript-library
+По вопросам доработки библиотеки, пишите сюда: https://t.me/oscript_library
 
 **Если у вас есть полезный скрипт - поделитесь им с сообществом!** 
 
@@ -60,14 +62,8 @@
             <p>Инфраструктура проекта использует арендованный сервер, который требует оплаты.</p>
             <p>Вы можете поддержать проект, перечислив любую удобную сумму, которая пойдет на оплату сервера и поддержку инфраструктуры.</p>
             <div id="donate">
-                <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%201Script&targets-hint=&default-sum=300&button-text=13&payment-type-choice=on&hint=&successURL=&quickpay=shop&account=410013915014133" width="423" height="222" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-            </div> 
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="RTUGG64AZEHNL">
-				<input type="image" src="https://www.paypalobjects.com/ru_RU/RU/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
-				<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
-			</form>           
+                <iframe src="https://yoomoney.ru/quickpay/button-widget?targets=&default-sum=100&button-text=11&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=410013915014133&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+            </div>         
         </div>
     </div>
 </div>
