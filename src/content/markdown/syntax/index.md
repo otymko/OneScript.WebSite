@@ -139,6 +139,7 @@
 * [МаскаXS](/syntax/page/МаскаXS)
 * [ОпределенияXPathXS](/syntax/page/ОпределенияXPathXS)
 * [СериализаторXDTO](/syntax/page/СериализаторXDTO)
+* [ПараметрыЧтенияXML](/syntax/page/ПараметрыЧтенияXML)
 
 ### Прочее
 * [COMОбъект](/syntax/page/COMОбъект)
