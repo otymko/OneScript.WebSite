@@ -14,3 +14,8 @@ body{
 .downloads-table td {
 	vertical-align: middle !important;
 }
+
+.tab-comment {
+	font-size: 9pt;
+	margin-top: 10pt;
+}

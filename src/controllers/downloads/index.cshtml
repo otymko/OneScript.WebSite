@@ -1,43 +1,55 @@
 <div class="container">
     <div class="row">
         <h1>Скачать OneScript</h1>
-        <p class="lead">На этой странице можно скачать дистрибутивы OneScript для различных операционных систем.
+        <p class="lead">На этой странице можно скачать дистрибутивы OneScript для различных операционных систем.</p>
+        <ul class="nav nav-tabs nav-justified" id="versionTabs" role="tablist">
+            <li class="nav-item active">
+                <a class="nav-link" id="tab-latest" data-toggle="tab" href="#latest" role="tab">
+                    <div>Актуальная версия</div>
+                    <div class="tab-comment">Наиболее свежие изменения</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab-night-build" data-toggle="tab" href="#night-build" role="tab">
+                    <div>Ознакомительная версия</div>
+                    <div class="tab-comment">Версия для тестирования (релиз-кандидат)</div>
+                </a>
+            </li>
+            @*<li class="nav-item">
+                <a class="nav-link" id="tab-current" data-toggle="tab" href="#current" role="tab">Версия с долгосрочной поддержкой (LTS)</a>
+            </li>*@
+        </ul>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <ul class="nav nav-pills justify-content-center" id="versionTabs" role="tablist">
-                <li class="nav-item active">
-                    <a class="nav-link" id="tab-latest" data-toggle="tab" href="#latest" role="tab">Актуальная версия</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="tab-night-build" data-toggle="tab" href="#night-build" role="tab">Ознакомительная версия</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="tab-current" data-toggle="tab" href="#current" role="tab">Версия с долгосрочной поддержкой (LTS)</a>
-                </li>
-            </ul>
-            <div class="tab-content" style="padding: 10pt;">
-                <div class="tab-pane active" id="latest" role="tabpanel">
-                    <p>Самые новые возможности и самые последние улучшения</p>
-                    @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.АктуальнаяСборка})
-                </div>
-                <div class="tab-pane" id="night-build" role="tabpanel">
-                    <p>Версия, которая сейчас находится в разработке и представлена для ознакомления.</p>
+        
+        <div class="tab-content" style="padding: 10pt;">
+            <div class="tab-pane active" id="latest" role="tabpanel">
+                @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.АктуальнаяСборка})
+            </div>
+            <div class="tab-pane" id="night-build" role="tabpanel">
+                <div class="panel panel-default">
                     @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.НочнаяСборка})
                 </div>
-                <div class="tab-pane" id="current" role="tabpanel">
-                    <p>Стабильная версия, которая подойдет большинству пользователей</p>
+            </div>
+            @*<div class="tab-pane" id="current" role="tabpanel">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>Стабильная версия, которая подойдет большинству пользователей.</p>
+                        <p>Раз в 2 года актуальная версия, которая зарекомендовала себя хорошо, переходит в режим LTS (Long-term support)</p>
+                        <p>Версия LTS поддерживается только в части исправления критичных ошибок, и в общем случае, версия LTS отстает по возможностям от данной примерно на 2 года, не считая исправления ошибок.</p>
+                    </div>
                     @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.СтабильнаяВерсия})
                 </div>
-            </div>
-           
-            <h3>Предыдущие версии:</h3>
-            <ul>
-                @foreach(var ЭлементСпискаСборок in Model.СписокСборок)
-                {
-                    <li><a href="@ЭлементСпискаСборок.Ссылка">@ЭлементСпискаСборок.Заголовок</a></li>
-                }
-            </ul>
+            </div>*@
         </div>
+        
+        <h3>Предыдущие версии:</h3>
+        <ul>
+            @foreach(var ЭлементСпискаСборок in Model.СписокСборок)
+            {
+                <li><a href="@ЭлементСпискаСборок.Ссылка">@ЭлементСпискаСборок.Заголовок</a></li>
+            }
+        </ul>
+        
     </div>
 </div>
