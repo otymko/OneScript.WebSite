@@ -2,7 +2,7 @@
     <div class="row">
         <h1>Скачать OneScript</h1>
         <p class="lead">На этой странице можно скачать дистрибутивы OneScript для различных операционных систем.</p>
-        <ul class="nav nav-tabs nav-justified" id="versionTabs" role="tablist">
+        <ul class="nav nav-pills nav-justified" id="versionTabs" role="tablist">
             <li class="nav-item active">
                 <a class="nav-link" id="tab-latest" data-toggle="tab" href="#latest" role="tab">
                     <div>Актуальная версия</div>
@@ -15,32 +15,31 @@
                     <div class="tab-comment">Версия для тестирования (релиз-кандидат)</div>
                 </a>
             </li>
-            @*<li class="nav-item">
-                <a class="nav-link" id="tab-current" data-toggle="tab" href="#current" role="tab">Версия с долгосрочной поддержкой (LTS)</a>
-            </li>*@
+            <li class="nav-item">
+                <a class="nav-link" id="tab-current" data-toggle="tab" href="#current" role="tab">
+                    <div>Версия с долгосрочной поддержкой (LTS)</div>
+                    <div class="tab-comment">Подойдет большинству пользователей.</div>
+                </a>
+            </li>
         </ul>
     </div>
     <div class="row">
         
-        <div class="tab-content" style="padding: 10pt;">
+        <div class="tab-content" style="padding: 15pt; margin-top: 10pt;">
             <div class="tab-pane active" id="latest" role="tabpanel">
                 @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.АктуальнаяСборка})
             </div>
             <div class="tab-pane" id="night-build" role="tabpanel">
                 @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.НочнаяСборка})
             </div>
-            @*<div class="tab-pane" id="current" role="tabpanel">
+            <div class="tab-pane" id="current" role="tabpanel">
                 <div class="panel panel-default">
-                    <div class="panel-body">
-                        <p>Стабильная версия, которая подойдет большинству пользователей.</p>
-                        <p>Раз в 2 года актуальная версия, которая зарекомендовала себя хорошо, переходит в режим LTS (Long-term support)</p>
-                        <p>Версия LTS поддерживается только в части исправления критичных ошибок, и в общем случае, версия LTS отстает по возможностям от данной примерно на 2 года, не считая исправления ошибок.</p>
-                    </div>
                     @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.СтабильнаяВерсия})
                 </div>
-            </div>*@
+            </div>
         </div>
-        
+    </div>
+    <div class="row">
         <h3>Предыдущие версии:</h3>
         <ul>
             @foreach(var ЭлементСпискаСборок in Model.СписокСборок)
@@ -48,6 +47,5 @@
                 <li><a href="@ЭлементСпискаСборок.Ссылка">@ЭлементСпискаСборок.Заголовок</a></li>
             }
         </ul>
-        
     </div>
 </div>
