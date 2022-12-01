@@ -33,9 +33,7 @@
                 @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.НочнаяСборка})
             </div>
             <div class="tab-pane" id="current" role="tabpanel">
-                <div class="panel panel-default">
-                    @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.СтабильнаяВерсия})
-                </div>
+                @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.СтабильнаяВерсия})
             </div>
         </div>
     </div>
