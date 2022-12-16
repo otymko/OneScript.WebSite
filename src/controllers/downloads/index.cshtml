@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab-current" data-toggle="tab" href="#current" role="tab">
+                <a class="nav-link" id="tab-lts" data-toggle="tab" href="#lts" role="tab">
                     <div>Версия с долгосрочной поддержкой (LTS)</div>
                     <div class="tab-comment">Используется у большинства пользователей</div>
                 </a>
@@ -32,7 +32,7 @@
             <div class="tab-pane" id="night-build" role="tabpanel">
                 @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.НочнаяСборка})
             </div>
-            <div class="tab-pane" id="current" role="tabpanel">
+            <div class="tab-pane" id="lts" role="tabpanel">
                 @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.СтабильнаяВерсия})
             </div>
         </div>
