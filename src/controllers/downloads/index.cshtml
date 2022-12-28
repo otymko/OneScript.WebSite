@@ -36,6 +36,43 @@
                 @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.СтабильнаяВерсия})
             </div>
         </div>
+        <a href="#ovmHelp" data-toggle="collapse"><span class="glyphicon glyphicon-info-sign info-sign"></span>Подсказка по автоматизации скачивания</a>
+        <div class="collapse" id="ovmHelp">
+            <div class="well" style="margin-top: 1em;">
+                <h4>Схема адресов скачивания релизов</h4>
+                <p>Для скачивания с помощью утилит, когда неизвестно точное имя файла, можно применять одну из схем:
+                    <ul>
+                        <li><code>/downloads/&lt;версия&gt;/&lt;тип&gt;</code></li>
+                        <li><code>/downloads/&lt;версия&gt;/&lt;разрядность&gt;/&lt;тип&gt;</code></li>
+                        <li><code>/downloads/&lt;версия&gt;/&lt;тип&gt;?bitness=&lt;разрядность&gt;</code></li>
+                    </ul>
+                </p>
+                <p>
+                    <em>Версия</em> - это номер версии, где точки заменены на знак подчеркивания: <strong>1_8_1</strong> или одна из стандартных версий:
+                    <ul>
+                        <li><strong>latest</strong> - Наиболее свежая стабильная версия</li>
+                        <li><strong>lts</strong> - Наиболее стабильная, но не очень свежая версия (предыдущий или пред-предыдущий релиз)</li>
+                        <li><strong>night-build</strong> - Версия, находящаяся в данный момент в разработке</li>
+                    </ul>
+                </p>
+                <p>
+                    <em>Разрядность</em> - один из вариантов архитектуры
+                    <ul>
+                        <li><strong>x86</strong> - 32-битная версия</li>
+                        <li><strong>x64</strong> - 64-битная версия</li>
+                    </ul>
+                </p>
+                <p>
+                    <em>Тип</em> - это идентификатор вида дистрибутива. Может принимать одно из значений:
+                    <ul>
+                        @foreach(var ВариантДистрибутива in Model.Манифест)
+                        {
+                            <li><strong>@ВариантДистрибутива.Идентификатор</strong> - @ВариантДистрибутива.Описание</li>
+                        }
+                    </ul>
+                </p>
+            </div>
+        </div>
     </div>
     <div class="row">
         <h3>Предыдущие версии:</h3>

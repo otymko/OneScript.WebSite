@@ -15,3 +15,9 @@ body{
 	font-size: 9pt;
 	margin-top: 10pt;
 }
+
+.info-sign {
+    color: #1d8ded;
+    margin-right: 5px;
+    vertical-align: text-top;
+}
