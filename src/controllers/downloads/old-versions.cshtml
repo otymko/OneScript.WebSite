@@ -1,0 +1,9 @@
+<a href="#old-builds-collapse" data-toggle="collapse"><span class="glyphicon glyphicon glyphicon-chevron-down">&nbsp;</span>Показать</a>
+<div class="collapse" id="old-builds-collapse">
+    <ul>
+        @foreach(var ЭлементСпискаСборок in Model.СписокСборок)
+        {
+            <li><a href="@ЭлементСпискаСборок.Ссылка">@ЭлементСпискаСборок.Заголовок</a></li>
+        }
+    </ul>
+</div>
