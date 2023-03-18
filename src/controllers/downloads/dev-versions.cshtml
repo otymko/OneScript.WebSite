@@ -1,25 +1,6 @@
 <div>
-    <a href="#night-builds-collapse" data-toggle="collapse"><span class="glyphicon glyphicon glyphicon-chevron-down">&nbsp;</span>Показать</a>
-    <div class="collapse" id="night-builds-collapse">
-        <ul class="nav nav-tabs" id="versionTabs" role="tablist" style="margin-top: 10pt;">
-            <li class="nav-item active">
-                <a class="nav-link" id="tab-night-build" data-toggle="tab" href="#night-build" role="tab">
-                    <div>Сборка ознакомительной версии</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="tab-latest-dev" data-toggle="tab" href="#latest-dev" role="tab">
-                    <div>Сборка актуальной версии</div>
-                </a>
-            </li>
-        </ul>
-        <div class="tab-content" style="padding: 15pt; margin-top: 10pt;">
-            <div class="tab-pane active" id="night-build" role="tabpanel">
-                @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.НочнаяСборка})
-            </div>
-            <div class="tab-pane" id="latest-dev" role="tabpanel">
-                @await Component.InvokeAsync("ПредставлениеАрхиваПО", new {data = Model.НочнаяСборкаАктуальной})
-            </div>
-        </div>
-    </div>
+    <ul>
+        <li><a href="/downloads/archive/night-build">Сборка ознакомительной версии</a></li>
+        <li><a href="/downloads/archive/latest-dev">Сборка актуальной версии</a></li>
+    </ul>
 </div>
