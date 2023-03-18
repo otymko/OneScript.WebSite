@@ -45,15 +45,16 @@
                     <li>Встроенные функции работы с примитивными типами</li>
                 </ul>
             </div>
-            <div class="col-md-3">
-                <h4>Новости и статьи</h4>
-                <ul class="link-list" id="news">
-                    @foreach(var ЗаписьНовости in @Model.СписокНовостей) {
-                    <li>
-                        <a href="@ЗаписьНовости.Ссылка">@ЗаписьНовости.ДатаЗаписи @ЗаписьНовости.Заголовок</a>
-                    </li>
-                    }
-                </ul>
+            <div class="col-md-3 well">
+                <div>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <p class="lead">Поддержи проект!</p>
+                    <p>Инфраструктура проекта использует арендованный сервер и доменное имя, которые требуют оплаты.</p>
+                    <p>Вы можете поддержать проект, перечислив любую удобную сумму, которая пойдет на оплату сервера и поддержку инфраструктуры.</p>
+                    <div id="donate">
+                        <iframe src="https://yoomoney.ru/quickpay/button-widget?targets=&default-sum=100&button-text=11&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=410013915014133&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+                    </div>         
+                </div>
             </div>
         </div>
 
