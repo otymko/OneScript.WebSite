@@ -1,0 +1,25 @@
+
+<div>
+    <button type="button" class="close" aria-hidden="true">&times;</button>
+    <p class="lead">Поддержи проект!</p>
+    <p>Инфраструктура проекта использует арендованный сервер и доменное имя, которые требуют оплаты.</p>
+    <p>Вы можете поддержать проект, перечислив любую удобную сумму, которая пойдет на оплату сервера и поддержку инфраструктуры.</p>
+    <div id="donate">
+        <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" id="donateForm">
+            <input type="hidden" name="receiver" value="410013915014133"/>
+            <input type="hidden" name="label" value="main_page_donate_form"/>
+            <input type="hidden" name="quickpay-form" value="button"/>
+            <div class="form-group" id="donateForm-sum">
+                <input type="text" name="sum" placeholder="Сумма в рублях" data-type="number" class="form-control"/>
+                <span class="help-block hidden">Не указана сумма перевода</span>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="paymentType" value="PC" checked/>ЮMoney</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="paymentType" value="AC"/>Банковской картой</label>
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-rub" aria-hidden="true"></span> Перевести</button>
+        </form>
+    </div>         
+</div>
