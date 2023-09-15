@@ -28,3 +28,12 @@ h3 {
 .theme-container {
     padding-left: 30px;
 }
+
+table {
+    border: lightgray 1pt solid;
+}
+
+table td, th {
+    border: lightgray 1pt solid;
+    padding: 7pt;
+}
